@@ -1,289 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <title>Sistema de Gestão de Farmacinha</title>
-        <meta content="Admin Dashboard" name="description" />
-        <meta content="Themesbrand" name="author" />
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Sistema de Gestão de Farmacinha</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-        <link rel="stylesheet" href="../plugins/morris/morris.css">
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
 
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    </head>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-    <body>
+<body>
 
-        <!-- Begin page -->
-        <div id="wrapper">
+    <!-- Begin page -->
+    <div id="wrapper">
 
-            <!-- Top Bar Start -->
-            <div class="topbar">
+        <!-- Top Bar Start -->
+        <div class="topbar">
 
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <a href="index.html" class="logo">
-                        <span>
-                            <img src="assets/images/farmacinha.png" alt="" height="98">
-                        </span>
-                        <i>
-                            <img src="assets/images/farmacinha.png" alt="" height="62">
-                        </i>
-                    </a>
-                </div>
-
-                <nav class="navbar-custom">
-
-                    <ul class="navbar-right d-flex list-inline float-right mb-0">
-                        <li class="dropdown notification-list d-none d-sm-block">
-                            <form role="search" class="app-search">
-                                <div class="form-group mb-0"> 
-                                    <input type="text" class="form-control" placeholder="Search..">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                </div>
-                            </form> 
-                        </li>
-                        <li class="dropdown notification-list">
-                            <div class="dropdown notification-list nav-pro-img">
-                                <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                                    <!-- item-->
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item text-success" href="#"><i class="mdi mdi-power text-success"></i> Logout</a>
-                                </div>                                                                    
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <ul class="list-inline menu-left mb-0">
-                        <li class="float-left">
-                            <button class="button-menu-mobile open-left waves-effect">
-                                <i class="mdi mdi-menu"></i>
-                            </button>
-                        </li>
-                        <li class="d-none d-sm-block">
-                            <div class="dropdown pt-3 d-inline-block">
-                                <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Criar
-                                </a>
-                                
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="add-farmacia.html">Farmácias</a>
-                                    <a class="dropdown-item" href="add-medicamento.html">Medicamentos</a>
-                                    <a class="dropdown-item" href="add-categoria.html">Categorias</a>
-                                    <a class="dropdown-item" href="add-gestor.html">Gestores</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                </nav>
-
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span>
+                        <img src="assets/images/farmacinha.png" alt="" height="98">
+                    </span>
+                    <i>
+                        <img src="assets/images/farmacinha.png" alt="" height="62">
+                    </i>
+                </a>
             </div>
-            <!-- Top Bar End -->
 
-            <!-- ========== Left Sidebar Start ========== -->
-            <div class="left side-menu">
-                <div class="slimscroll-menu" id="remove-scroll">
+            <nav class="navbar-custom">
 
-                    <!--- Sidemenu -->
-                    <div id="sidebar-menu">
-                        <!-- Left Menu Start -->
-                        <ul class="metismenu" id="side-menu">
-                            <li class="menu-title">Menu</li>
-                            <li>
-                                <a href="index.html" class="waves-effect">
-                                    <i class="mdi mdi-view-dashboard"></i><span class="badge badge-primary badge-pill float-right">2</span> <span> Dashboard </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-pharmacy"></i><span> Farmácias <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="add-farmacia.html">Adicionar Farmácia</a></li>
-                                    <li><a href="list-farmacia.html">Gerir Farmácias</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-lumx"></i><span> Medicamentos <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="add-medicamento.html">Adicionar Medicamentos</a></li>
-                                    <li><a href="list-medicamento.html">Gerir Medicamentos</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-menu"></i><span> Categorias <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="add-categoria.html">Adicionar Categorias</a></li>
-                                    <li><a href="list-categoria.html">Gerir Categorias</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account"></i><span> Gestores <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="add-gestor.html">Adicionar Gestores</a></li>
-                                    <li><a href="list-gestor.html">Gerir Gestores</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-title">Extras</li>
-
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-location"></i><span> Authentication <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="pages-login.html">Login</a></li>
-                                    <li><a href="pages-register.html">Register</a></li>
-                                    <li><a href="pages-recoverpw.html">Recover Password</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Extra Pages <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="pages-404.html">Error 404</a></li>
-                                    <li><a href="pages-500.html">Error 500</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                    <!-- Sidebar -->
-                    <div class="clearfix"></div>
-
-                </div>
-                <!-- Sidebar -left -->
-
-            </div>
-            <!-- Left Sidebar End -->
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container-fluid">
-
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="page-title-box">
-                                    <h4 class="page-title">Dashboard</h4>
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item active">
-                                            Bem vindo a Dashboard Farmacinha
-                                        </li>
-                                    </ol>
-                                </div>
+                <ul class="navbar-right d-flex list-inline float-right mb-0">
+                    <li class="dropdown notification-list d-none d-sm-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="dropdown notification-list">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown"
+                                href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i>
+                                    Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-success" href="#"><i
+                                        class="mdi mdi-power text-success"></i> Logout</a>
                             </div>
                         </div>
-                        <!-- end row -->
+                    </li>
 
-                        <div class="row">
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-pharmacy float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Farmácias</h6>
-                                                <h4 class="mb-4">1,587</h4>
-                                                <span class="badge badge-info"> +11% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-lumx float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Medicamentos</h6>
-                                                <h4 class="mb-4">$46,782</h4>
-                                                <span class="badge badge-danger"> -29% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-menu float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Categorias</h6>
-                                                <h4 class="mb-4">$15.9</h4>
-                                                <span class="badge badge-warning"> 0% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-account float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Gestores</h6>
-                                                <h4 class="mb-4">1890</h4>
-                                                <span class="badge badge-info"> +89% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-sm-block">
+                        <div class="dropdown pt-3 d-inline-block">
+                            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Criar
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="add-farmacia.html">Farmácias</a>
+                                <a class="dropdown-item" href="add-medicamento.html">Medicamentos</a>
+                                <a class="dropdown-item" href="add-categoria.html">Categorias</a>
+                                <a class="dropdown-item" href="add-gestor.html">Gestores</a>
                             </div>
-                            <!-- end row -->
+                        </div>
+                    </li>
+                </ul>
 
-                    </div> <!-- container-fluid -->
-
-                </div> <!-- content -->
-
-                <footer class="footer">
-                        © 2021 - <span class="d-none d-sm-inline-block"> Created with <i class="mdi mdi-heart text-success"></i> by Nuno Albuquerque</span>.
-                </footer>
-                
-            </div>
-
-
-            <!-- ============================================================== -->
-            <!-- End Right content here -->
-            <!-- ============================================================== -->
-
+            </nav>
 
         </div>
-        <!-- END wrapper -->
-            
+        <!-- Top Bar End -->
 
-        <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/metisMenu.min.js"></script>
-        <script src="assets/js/jquery.slimscroll.js"></script>
-        <script src="assets/js/waves.min.js"></script>
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
 
-        <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Menu</li>
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="mdi mdi-view-dashboard"></i><span
+                                    class="badge badge-primary badge-pill float-right">2</span> <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-pharmacy"></i><span>
+                                    Farmácias <span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="add-farmacia.html">Adicionar Farmácia</a></li>
+                                <li><a href="list-farmacia.html">Gerir Farmácias</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-lumx"></i><span>
+                                    Medicamentos <span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="add-medicamento.html">Adicionar Medicamentos</a></li>
+                                <li><a href="list-medicamento.html">Gerir Medicamentos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-menu"></i><span>
+                                    Categorias <span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="add-categoria.html">Adicionar Categorias</a></li>
+                                <li><a href="list-categoria.html">Gerir Categorias</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account"></i><span>
+                                    Gestores <span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="add-gestor.html">Adicionar Gestores</a></li>
+                                <li><a href="list-gestor.html">Gerir Gestores</a></li>
+                            </ul>
+                        </li>
 
-        <!--Morris Chart-->
-        <script src="../plugins/morris/morris.min.js"></script>
-        <script src="../plugins/raphael/raphael-min.js"></script>
-        <script src="assets/pages/dashboard.js"></script>
+                        <li class="menu-title">Extras</li>
 
-        <!-- App js -->
-        <script src="assets/js/app.js"></script>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i
+                                    class="mdi mdi-account-location"></i><span> Authentication <span
+                                        class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                                </span></a>
+                            <ul class="submenu">
+                                <li><a href="pages-login.html">Login</a></li>
+                                <li><a href="pages-register.html">Register</a></li>
+                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i
+                                    class="mdi mdi-google-pages"></i><span> Extra Pages <span
+                                        class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                                </span></a>
+                            <ul class="submenu">
+                                <li><a href="pages-404.html">Error 404</a></li>
+                                <li><a href="pages-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Gestores</h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Farmacinha</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Gestores</a></li>
+                                    <li class="breadcrumb-item active">Listar Gestores</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+                                    <div class="alert alert-info alert-block">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                    <h4 class="mt-0 header-title">Listar Gestores</h4>
+                                    <table id="datatable-buttons"
+                                        class="table table-striped table-bordered dt-responsive nowrap"
+                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead style="background-color: #58db83">
+                                            <tr>
+                                                <th width="3%">#ID</th>
+                                                <th>Nome</th>
+                                                <th>Telefone 1</th>
+                                                <th>Telefone Alternativo</th>
+                                                <th>Endereço</th>
+                                                <th>Cidade</th>
+                                                <th width="15%">Acção</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td>Telefone 1</td>
+                                                <td>Telefone Alternativo</td>
+                                                <td>Endereço</td>
+                                                <td>Cidade</td>
+                                                <td>{{ $client->name }}</td>
+
+                                                <td>
+                                                    <div class="dropdown mo-mb-2" style="text-align: center">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                            Editar
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="edit-farmacia.html">Editar
+                                                                Farmacias</a>
+                                                            <button class="dropdown-item" onclick="">
+                                                                Remover
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                    <div class="modal fade bs-example-modal-center" id="removerModal" tabindex="-1" role="dialog"
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0">Deseja Remover Este Cliente?</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <button type="button" class="btn btn-danger" id="delete-btn">Remover</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                </div> <!-- container-fluid -->
+
+            </div> <!-- content -->
+
+            <footer class="footer">
+                © 2021 - <span class="d-none d-sm-inline-block"> Created with <i class="mdi mdi-heart text-success"></i>
+                    by Nuno Albuquerque</span>.
+            </footer>
+
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+    <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="../plugins/morris/morris.min.js"></script>
+    <script src="../plugins/raphael/raphael-min.js"></script>
+    <script src="assets/pages/dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
 
 </body>
 

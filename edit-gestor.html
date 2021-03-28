@@ -196,12 +196,12 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="page-title-box">
-                                <h4 class="page-title">Adicionar Medicamento</h4>
+                                <h4 class="page-title">Editar Gestor</h4>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="javascript:void(0);">Gestão da Farmacinha</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Medicamentos</a></li>
-                                    <li class="breadcrumb-item active">Adicionar Medicamento</li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Gestor</a></li>
+                                    <li class="breadcrumb-item active">Editar Gestor</li>
                                 </ol>
                             </div>
                         </div>
@@ -213,55 +213,54 @@
                             <div class="card m-b-20">
                                 <div class="card-body">
 
-                                    <h4 class="mt-0 header-title">Adicionar Medicamento</h4>
+                                    <h4 class="mt-0 header-title">Editar Gestor</h4>
                                     
                                     <div class="alert alert-success alert-block">
                                         <button type="button" class="close" data-dismiss="alert">×</button>
-                                        <strong>{{ message }}</strong>
+                                        <strong>{{ $message }}</strong>
                                     </div>
                                     
 
                                     <form class="" method="POST" enctype="multipart/form-data"
                                         action="/">
-                                        
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label>Nome do Medicamento <span>*</span></label>
-                                                    <input name="name" id="name " type="text" class="form-control"
+                                                    <label>Nome da Gestor <span>*</span></label>
+                                                    <input name="name" id="name" type="text" class="form-control"
                                                         required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Categoria do Medicamento <span>*</span></label>
-                                                    <select class="form-control" name="medic_id" id="medic_id">
-                                                        <option selected disabled hidden>Selecione a Categoria</option>
-                                                        
-                                                        <option value="">listar Categorias
-                                                        </option>
-                                                        
-                                                    </select>
+                                                    <label>Telefone 1<span>*</span></label>
+                                                    <input name="phone1" id="phone1" type="text" class="form-control"
+                                                        required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Descrição <span>*</span></label>
-                                                    <input name="phone1" id="phone1" type="text" class="form-control"
+                                                    <label>Endereço <span>*</span></label>
+                                                    <input name="address" id="address" type="text" class="form-control"
                                                         required />
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label>Dosagem/Posologia<span>*</span></label>
-                                                    <input name="phone1" id="phone2" type="text" class="form-control"
-                                                        required />
+                                                    <label>Password <span>*</span></label>
+                                                    <label for="password"></label><input name="password" id="password"
+                                                        type="password" class="form-control" required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Quantidade <span>*</span></label>
-                                                    <input name="quantity" id="quantity" type="text"
-                                                        class="form-control" required />
+                                                    <label>Confirmar Password <span>*</span></label>
+                                                    <label for="password2"></label><input name="password2"
+                                                        id="password2" type="password" class="form-control"
+                                                        data-parsley-equalto="#password" required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Preço Unitário<span>*</span></label>
-                                                    <input name="price" id="price " type="text" class="form-control"
-                                                        required />
+                                                    <label>Farmácia pertencente <span>*</span></label>
+                                                    <select class="form-control" name="farmacia_id" id="farmacia_id"
+                                                        required>
+                                                        <option selected disabled hidden>Selecione a farmácia</option>
+                                                        <option value="">Listar Farmacias
+                                                        </option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -273,7 +272,7 @@
                                                 <button type="reset" class="btn btn-secondary waves-effect m-l-5">
                                                     Limpar
                                                 </button>
-                                                <a href="list-categoria.html"
+                                                <a href="list-gestor.html"
                                                     class="btn btn-secondary waves-effect m-l-5">Cancelar</a>
                                             </div>
                                         </div>
@@ -286,12 +285,20 @@
                     </div> <!-- end row -->
 
                 </div> <!-- container-fluid -->
-            </div>
-        </div>
 
-        <!-- ============================================================== -->
-        <!-- End Right content here -->
-        <!-- ============================================================== -->
+            </div> <!-- content -->
+        </div>
+        <footer class="footer">
+            © 2021 - <span class="d-none d-sm-inline-block"> Created with <i class="mdi mdi-heart text-success"></i> by
+                Nuno Albuquerque</span>.
+        </footer>
+
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
 
 
     </div>

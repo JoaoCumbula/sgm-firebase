@@ -177,77 +177,84 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Dashboard</h4>
+                                    <h4 class="page-title">Categorias</h4>
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item active">
-                                            Bem vindo a Dashboard Farmacinha
-                                        </li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Farmacinha</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Categorias</a></li>
+                                        <li class="breadcrumb-item active">Listar Categorias</li>
                                     </ol>
                                 </div>
                             </div>
                         </div>
                         <!-- end row -->
-
+    
                         <div class="row">
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-pharmacy float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Farmácias</h6>
-                                                <h4 class="mb-4">1,587</h4>
-                                                <span class="badge badge-info"> +11% </span> <span class="ml-2">From previous period</span>
-                                            </div>
+                            <div class="col-12">
+                                <div class="card m-b-20">
+                                    <div class="card-body">
+                                        <div class="alert alert-info alert-block">
+                                            <button type="button" class="close" data-dismiss="alert">×</button>
+                                            <strong>{{ $message }}</strong>
                                         </div>
+                                        <h4 class="mt-0 header-title">Listar Categorias</h4>
+                                        <table id="datatable-buttons"
+                                            class="table table-striped table-bordered dt-responsive nowrap"
+                                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead style="background-color: #58db83">
+                                                <tr>
+                                                    <th width="3%">#ID</th>
+                                                    <th>Nome</th>
+                                                    
+                                                    <th width="15%">Acção</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>{{ $client->id }}</td>
+                                                    <td>{{ $client->name }}</td>
+                                                    
+                                                    <td>
+                                                        <div class="dropdown mo-mb-2" style="text-align: center">
+                                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                                id="dropdownMenuButton" data-toggle="dropdown"
+                                                                aria-haspopup="true" aria-expanded="false">
+                                                                Editar
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <a class="dropdown-item"
+                                                                    href="edit-farmacia.html">Editar
+                                                                    Farmacias</a>
+                                                                <button class="dropdown-item"
+                                                                    onclick="">
+                                                                    Remover
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-lumx float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Medicamentos</h6>
-                                                <h4 class="mb-4">$46,782</h4>
-                                                <span class="badge badge-danger"> -29% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                        <div class="modal fade bs-example-modal-center" id="removerModal" tabindex="-1" role="dialog"
+                            aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title mt-0">Deseja Remover Este Cliente?</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
                                     </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-menu float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Categorias</h6>
-                                                <h4 class="mb-4">$15.9</h4>
-                                                <span class="badge badge-warning"> 0% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
+                                    <div class="modal-body">
+                                        <button type="button" class="btn btn-danger" id="delete-btn">Remover</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                                     </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6">
-                                    <div class="card mini-stat bg-success">
-                                        <div class="card-body mini-stat-img">
-                                            <div class="mini-stat-icon">
-                                                <i class="mdi mdi-account float-right"></i>
-                                            </div>
-                                            <div class="text-white">
-                                                <h6 class="text-uppercase mb-3">Total de Gestores</h6>
-                                                <h4 class="mb-4">1890</h4>
-                                                <span class="badge badge-info"> +89% </span> <span class="ml-2">From previous period</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end row -->
-
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+    
                     </div> <!-- container-fluid -->
 
                 </div> <!-- content -->

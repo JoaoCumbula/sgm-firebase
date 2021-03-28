@@ -3,48 +3,44 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <title>Sistema de Gestão de Farmacinha</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="Themesbrand" name="author" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
-    <link rel="stylesheet" href="../plugins/morris/morris.css">
+    <link rel="stylesheet" href="../plugins/morris/morris.css" />
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
     <!-- Begin page -->
     <div id="wrapper">
-
         <!-- Top Bar Start -->
         <div class="topbar">
-
             <!-- LOGO -->
             <div class="topbar-left">
                 <a href="index.html" class="logo">
                     <span>
-                        <img src="assets/images/farmacinha.png" alt="" height="98">
+                        <img src="assets/images/farmacinha.png" alt="" height="98" />
                     </span>
                     <i>
-                        <img src="assets/images/farmacinha.png" alt="" height="62">
+                        <img src="assets/images/farmacinha.png" alt="" height="62" />
                     </i>
                 </a>
             </div>
 
             <nav class="navbar-custom">
-
                 <ul class="navbar-right d-flex list-inline float-right mb-0">
                     <li class="dropdown notification-list d-none d-sm-block">
                         <form role="search" class="app-search">
                             <div class="form-group mb-0">
-                                <input type="text" class="form-control" placeholder="Search..">
+                                <input type="text" class="form-control" placeholder="Search.." />
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
@@ -53,19 +49,18 @@
                         <div class="dropdown notification-list nav-pro-img">
                             <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown"
                                 href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                                <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle" />
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i>
                                     Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-success" href="#"><i
-                                        class="mdi mdi-power text-success"></i> Logout</a>
+                                <a class="dropdown-item text-primary" href="#"><i
+                                        class="mdi mdi-power text-primary"></i> Logout</a>
                             </div>
                         </div>
                     </li>
-
                 </ul>
 
                 <ul class="list-inline menu-left mb-0">
@@ -90,9 +85,7 @@
                         </div>
                     </li>
                 </ul>
-
             </nav>
-
         </div>
         <!-- Top Bar End -->
 
@@ -188,20 +181,23 @@
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
+
         <div class="content-page">
             <!-- Start content -->
             <div class="content">
                 <div class="container-fluid">
-
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="page-title-box">
-                                <h4 class="page-title">Adicionar Medicamento</h4>
+                                <h4 class="page-title">Editar Farmácia</h4>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Gestão da Farmacinha</a>
+                                    <li class="breadcrumb-item">
+                                        <a href="javascript:void(0);">Gestão da Farmacinha</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Medicamentos</a></li>
-                                    <li class="breadcrumb-item active">Adicionar Medicamento</li>
+                                    <li class="breadcrumb-item">
+                                        <a href="javascript:void(0);">Farmácia</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Editar Farmácia</li>
                                 </ol>
                             </div>
                         </div>
@@ -212,56 +208,54 @@
                         <div class="col-lg-12">
                             <div class="card m-b-20">
                                 <div class="card-body">
+                                    <h4 class="mt-0 header-title">Editar Farmácia</h4>
 
-                                    <h4 class="mt-0 header-title">Adicionar Medicamento</h4>
-                                    
                                     <div class="alert alert-success alert-block">
-                                        <button type="button" class="close" data-dismiss="alert">×</button>
-                                        <strong>{{ message }}</strong>
+                                        <button type="button" class="close" data-dismiss="alert">
+                                            ×
+                                        </button>
+                                        <strong></strong>
                                     </div>
-                                    
 
-                                    <form class="" method="POST" enctype="multipart/form-data"
-                                        action="/">
-                                        
+                                    <form class="" method="POST" enctype="multipart/form-data" action="/">
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label>Nome do Medicamento <span>*</span></label>
+                                                    <label>Nome da Farmácia <span>*</span></label>
                                                     <input name="name" id="name " type="text" class="form-control"
                                                         required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Categoria do Medicamento <span>*</span></label>
-                                                    <select class="form-control" name="medic_id" id="medic_id">
-                                                        <option selected disabled hidden>Selecione a Categoria</option>
-                                                        
-                                                        <option value="">listar Categorias
-                                                        </option>
-                                                        
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Descrição <span>*</span></label>
+                                                    <label>Telefone 1<span>*</span></label>
                                                     <input name="phone1" id="phone1" type="text" class="form-control"
                                                         required />
                                                 </div>
-                                            </div>
-                                            <div class="col-6">
                                                 <div class="form-group">
-                                                    <label>Dosagem/Posologia<span>*</span></label>
-                                                    <input name="phone1" id="phone2" type="text" class="form-control"
+                                                    <label>Telefone 2</label>
+                                                    <input name="phone1" id="phone2" type="text" class="form-control" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Endereço <span>*</span></label>
+                                                    <input name="address" id="address " type="text" class="form-control"
                                                         required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Quantidade <span>*</span></label>
-                                                    <input name="quantity" id="quantity" type="text"
-                                                        class="form-control" required />
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Preço Unitário<span>*</span></label>
-                                                    <input name="price" id="price " type="text" class="form-control"
-                                                        required />
+                                                    <label>Cidade <span>*</span></label>
+                                                    <select class="form-control" name="cidade" id="cidade" required>
+                                                        <option selected disabled hidden>
+                                                            Selecione uma opção
+                                                        </option>
+                                                        <option value="MT">Cidade de Matola</option>
+                                                        <option value="MP">Maputo</option>
+                                                        <option value="X">Xai-xai</option>
+                                                        <option value="V">Inhambane</option>
+                                                        <option value="CH">Chimoio</option>
+                                                        <option value="B">Beira</option>
+                                                        <option value="NP">Nampula</option>
+                                                        <option value="NC">Nacala</option>
+                                                        <option value="PB">Pemba</option>
+                                                        <option value="LN">Lichinga</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -273,30 +267,31 @@
                                                 <button type="reset" class="btn btn-secondary waves-effect m-l-5">
                                                     Limpar
                                                 </button>
-                                                <a href="list-categoria.html"
+                                                <a href="list-farmacia.html"
                                                     class="btn btn-secondary waves-effect m-l-5">Cancelar</a>
                                             </div>
                                         </div>
                                     </form>
-
                                 </div>
                             </div>
-                        </div> <!-- end col -->
-
-                    </div> <!-- end row -->
-
-                </div> <!-- container-fluid -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
             </div>
+            <footer class="footer">
+                © 2021 - <span class="d-none d-sm-inline-block"> Created with <i class="mdi mdi-heart text-success"></i>
+                    by Nuno Albuquerque</span>.
+            </footer>
         </div>
 
         <!-- ============================================================== -->
         <!-- End Right content here -->
         <!-- ============================================================== -->
-
-
     </div>
     <!-- END wrapper -->
-
 
     <!-- jQuery  -->
     <script src="assets/js/jquery.min.js"></script>
@@ -314,7 +309,6 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
 </body>
 
 </html>
