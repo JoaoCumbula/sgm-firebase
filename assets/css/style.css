@@ -1697,12 +1697,12 @@ button:focus {
 }
 
 .alert-danger {
-  color: #7a6fbe;
-  background-color: #dbd8ee;
+  color: #9c1818;
+  
 }
 
 .alert-danger .alert-link {
-  color: #5b4eac;
+  color: #a80b20;
 }
 
 .alert-danger hr {
