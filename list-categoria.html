@@ -203,16 +203,16 @@
                                             <thead style="background-color: #58db83">
                                                 <tr>
                                                     <th width="3%">#ID</th>
-                                                    <th>Nome</th>
-                                                    
-                                                    <th width="15%">Acção</th>
+                                                    <th width=20%>Nome</th>
+                                                    <th>Farmacias Pertencentes</th>
+                                                    <th width="10%">Acção</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>{{ $client->id }}</td>
                                                     <td>{{ $client->name }}</td>
-                                                    
+                                                    <td>Farmacias Pertencentes</td>
                                                     <td>
                                                         <div class="dropdown mo-mb-2" style="text-align: center">
                                                             <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -222,7 +222,7 @@
                                                             </button>
                                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                                 <a class="dropdown-item"
-                                                                    href="edit-farmacia.html">Editar
+                                                                    href="edit-categoria.html">Editar
                                                                     Farmacias</a>
                                                                 <button class="dropdown-item"
                                                                     onclick="">
