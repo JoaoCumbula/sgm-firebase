@@ -19,6 +19,14 @@
     <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js" defer></script>
+    <script src="assets/scripts/initializer.js" defer></script>
+    <script src="assets/scripts/verification-logout.js" defer></script>
+    <script src="assets/scripts/farmacia.js" defer></script>
 </head>
 
 <body>
@@ -193,46 +201,17 @@
                                     </div>
                                     <h4 class="mt-0 header-title">Listar Farmacias</h4>
                                     <table id="datatable-buttons"
-                                        class="table table-striped table-bordered dt-responsive nowrap"
+                                        class="table table-farmacias table-striped table-bordered dt-responsive nowrap"
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead style="background-color: #58db83">
                                             <tr>
-                                                <th width="3%">#ID</th>
                                                 <th>Nome</th>
                                                 <th>Telefone 1</th>
+                                                <th>Telefone 2</th>
                                                 <th>Endereço</th>
-                                                <th>Farmacias pertencente</th>
                                                 <th width="15%">Acção</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Nome</td>
-                                                <td>Telefone 1</td>
-                                                <td>Telefone Alternativo</td>
-                                                <td>Endereço</td>
-                                                <td>{{ $client->name }}</td>
-                                                
-                                                <td>
-                                                    <div class="dropdown mo-mb-2" style="text-align: center">
-                                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                            id="dropdownMenuButton" data-toggle="dropdown"
-                                                            aria-haspopup="true" aria-expanded="false">
-                                                            Editar
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <a class="dropdown-item"
-                                                                href="edit-farmacia.html">Editar
-                                                                Farmacias</a>
-                                                            <button class="dropdown-item"
-                                                                onclick="">
-                                                                Remover
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
                                     </table>
                                 </div>
                             </div>
