@@ -1,14 +1,10 @@
 const db = firebase.firestore();
 
-const tableFarmacias = document.querySelector(".table-farmacias");
+const tableCategorias = document.querySelector(".table-categorias");
 
-const renderFarmacia = (doc) => {
+const renderCategoria = (doc) => {
   const tr = `<tr>
     <td>${doc.data().nome}</td>
-    <td>${doc.data().telefone1}</td>
-    <td>${doc.data().telefone2}</td>
-    <td>${doc.data().endereco}</td>
-    
     <td>
         <div class="dropdown mo-mb-2" style="text-align: center">
             <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -28,12 +24,12 @@ const renderFarmacia = (doc) => {
         </div>
     </td>
 </tr>`;
-  tableFarmacias.insertAdjacentHTML('beforeend', tr);
+  tableCategorias.insertAdjacentHTML('beforeend', tr);
 };
 
-db.collectionGroup("farmacia")
+db.collectionGroup("categoria")
   .onSnapshot((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      renderFarmacia(doc);
+      renderCategoria(doc);
     });
   });
