@@ -20,20 +20,25 @@ const renderFarmacia = (doc) => {
                 <a class="dropdown-item"
                     href="edit-farmacia.html">Editar
                     Farmacias</a>
-                <button class="dropdown-item"
-                    onclick="">
+                <button class="dropdown-item" onclick="removerFarm()">
                     Remover
                 </button>
             </div>
         </div>
     </td>
 </tr>`;
-  tableFarmacias.insertAdjacentHTML('beforeend', tr);
+  tableFarmacias.insertAdjacentHTML("beforeend", tr);
 };
 
-db.collectionGroup("farmacia")
-  .onSnapshot((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      renderFarmacia(doc);
-    });
+db.collectionGroup("farmacia").onSnapshot((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    renderFarmacia(doc);
   });
+});
+
+//Click to Delete Farmacia
+
+function removerFarm() {
+  const modalShow = document.querySelector(".add-modal");
+    modalShow.classList.add("bs-example-modal")
+}
