@@ -1,6 +1,6 @@
 const db = firebase.firestore();
 
-const tableFarmacias = document.querySelector(".table-medicamentos");
+const tableFarmacias = document.querySelector(".table-produtos");
 
 const renderFarmacia = (doc) => {
   const tr = `<tr>
@@ -9,8 +9,8 @@ const renderFarmacia = (doc) => {
   <td>${doc.data().descricao}</td>
   <td>${doc.data().dosagem}</td>
   <td>${doc.data().quantidade}</td>
-  <td>${doc.data().valor}</td>
-  <td>${doc.data().quantidade*doc.data().valor}</td>
+  <td>${doc.data().preco}</td>
+  <td>${doc.data().quantidade*doc.data().preco}</td>
 
   <td>
       <div class="dropdown mo-mb-2" style="text-align: center">
@@ -20,7 +20,7 @@ const renderFarmacia = (doc) => {
               Editar
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="edit-medicamento.html">Editar
+              <a class="dropdown-item" href="edit-Produto.html">Editar
                   Farmacias</a>
               <button class="dropdown-item" onclick="">
                   Remover
@@ -32,7 +32,7 @@ const renderFarmacia = (doc) => {
   tableFarmacias.insertAdjacentHTML("beforeend", tr);
 };
 
-db.collectionGroup("medicamento").onSnapshot((querySnapshot) => {
+db.collectionGroup("produto").onSnapshot((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     renderFarmacia(doc);
   });
