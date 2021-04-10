@@ -19,6 +19,13 @@
     <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js" defer></script>
+    <script src="assets/scripts/initializer.js" defer></script>
+    <script src="assets/scripts/verification-logout.js" defer></script>
 </head>
 
 <body>
@@ -63,7 +70,7 @@
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i>
                                     Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-success" href="#"><i
+                                <a class="dropdown-item text-success" onclick="signOut()"><i
                                         class="mdi mdi-power text-success"></i> Logout</a>
                             </div>
                         </div>
