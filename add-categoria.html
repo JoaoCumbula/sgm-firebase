@@ -19,6 +19,14 @@
     <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js" defer></script>
+    <script src="assets/scripts/initializer.js" defer></script>
+    <script src="assets/scripts/verification-logout.js" defer></script>
+    <script src="assets/scripts/add-categoria.js" defer></script>
 </head>
 
 <body>
@@ -59,7 +67,7 @@
                                 <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i>
                                     Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-success" href="#"><i
+                                <a class="dropdown-item text-success" onclick="signOut()"><i
                                         class="mdi mdi-power text-success"></i> Logout</a>
                             </div>
                         </div>
@@ -191,38 +199,21 @@
                                 <div class="card-body">
                                     <h4 class="mt-0 header-title">Adicionar Categorias</h4>
 
-                                    <div class="alert alert-success alert-block">
+                                    <div class="alert alert-success alert-block" style="display: none;" id="alertmsg">
                                         <button type="button" class="close" data-dismiss="alert">
                                             ×
                                         </button>
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Categoria inserida com sucesso</strong>
                                     </div>
 
-                                    <form class="" method="POST" enctype="multipart/form-data" action="/">
+                                    <form class="form" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label>Nome da Categoria <span>*</span></label>
                                                     <input name="nome" id="nome" type="text" class="form-control"
                                                         required />
-                                                </div>
-                                                <div class="form-group">
-                                                    
-                                                    <label class="control-label">Multiple Select</label>
-
-                                                    <select class="select2 form-control select2-multiple" multiple="multiple" multiple data-placeholder="Choose ...">
-                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="HI">Hawaii</option>
-                                                        </optgroup>
-                                                        <optgroup label="Pacific Time Zone">
-                                                            <option value="CA">California</option>
-                                                            <option value="NV">Nevada</option>
-                                                            <option value="OR">Oregon</option>
-                                                            <option value="WA">Washington</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
+                                                </div> 
                                             </div>
                                         </div>
                                         <div class="form-group">
