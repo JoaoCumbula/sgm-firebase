@@ -18,7 +18,7 @@ const renderGestor = (doc) => {
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item"
-                    href="edit-farmacia.html">Editar
+                    href="edit-gestor.html">Editar
                     Farmacias</a>
                 <button class="dropdown-item"
                     onclick="">
