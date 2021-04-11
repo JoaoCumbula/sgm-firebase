@@ -3,7 +3,7 @@ const db = firebase.firestore();
 const tableFarmacias = document.querySelector(".table-farmacias");
 
 const renderFarmacia = (doc) => {
-  const tr = `<tr>
+  const tr = `<tr data-id="${doc.id}">
     <td>${doc.data().nome}</td>
     <td>${doc.data().telefone1}</td>
     <td>${doc.data().telefone2}</td>
@@ -21,7 +21,7 @@ const renderFarmacia = (doc) => {
                 <a class="dropdown-item"
                     href="edit-farmacia.html">Editar
                     Farmacias</a>
-                <button class="dropdown-item" onclick="removerFarm()">
+                <button class="btn btn-delete dropdown-item">
                     Remover
                 </button>
             </div>
@@ -29,6 +29,19 @@ const renderFarmacia = (doc) => {
     </td>
 </tr>`;
   tableFarmacias.insertAdjacentHTML("beforeend", tr);
+
+  //Clikc to delete Farmacia
+  const btnDelete = document.querySelector(`[data-id="${doc.id}"] .btn-delete`);
+  btnDelete.addEventListener("click", (e) => {
+    e.preventDefault();
+    db.collection("farmacia")
+      .doc(`${doc.id}`)
+      .delete()
+      .then(() => {
+        window.location.href="list-farmacia.html";
+      });
+      const alert = (document.getElementById("alertmsg").style.display = "block");
+  });
 };
 
 db.collectionGroup("farmacia").onSnapshot((querySnapshot) => {
@@ -36,10 +49,3 @@ db.collectionGroup("farmacia").onSnapshot((querySnapshot) => {
     renderFarmacia(doc);
   });
 });
-
-//Click to Delete Farmacia
-
-function removerFarm() {
-  const modalShow = document.querySelector(".add-modal");
-    modalShow.classList.add("bs-example-modal")
-}

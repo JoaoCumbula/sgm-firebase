@@ -34,8 +34,8 @@ const renderCategoria = (doc) => {
       .delete()
       .then(() => {
         window.location.href="list-categoria.html";
-        const alert = (document.getElementById("alertmsg").style.display = "block");
       });
+      const alert = (document.getElementById("alertmsg").style.display = "block");
   });
 };
 

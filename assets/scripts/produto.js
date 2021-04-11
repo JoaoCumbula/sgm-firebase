@@ -3,7 +3,7 @@ const db = firebase.firestore();
 const tableFarmacias = document.querySelector(".table-produtos");
 
 const renderFarmacia = (doc) => {
-  const tr = `<tr>
+  const tr = `<tr data-id="${doc.id}">
   <td>${doc.data().nome}</td>
   <td>${doc.data().categoria}</td>
   <td>${doc.data().descricao}</td>
@@ -22,7 +22,7 @@ const renderFarmacia = (doc) => {
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="edit-Produto.html">Editar
                   Farmacias</a>
-              <button class="dropdown-item" onclick="">
+              <button class="btn btn-delete dropdown-item">
                   Remover
               </button>
           </div>
@@ -30,6 +30,21 @@ const renderFarmacia = (doc) => {
   </td>
 </tr>`;
   tableFarmacias.insertAdjacentHTML("beforeend", tr);
+
+  //Clikc to delete Farmacia
+  const btnDelete = document.querySelector(`[data-id="${doc.id}"] .btn-delete`);
+  btnDelete.addEventListener("click", (e) => {
+    e.preventDefault();
+    db.collection("categoria")
+      .doc(doc.data().categoria)
+      .collection("produto")
+      .doc(`${doc.id}`)
+      .delete()
+      .then(() => {
+        window.location.href = "list-produto.html";
+      });
+    const alert = (document.getElementById("alertmsg").style.display = "block");
+  });
 };
 
 db.collectionGroup("produto").onSnapshot((querySnapshot) => {
