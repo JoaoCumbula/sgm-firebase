@@ -8,6 +8,7 @@ const renderFarmacia = (doc) => {
     <td>${doc.data().telefone1}</td>
     <td>${doc.data().telefone2}</td>
     <td>${doc.data().endereco}</td>
+    <td>${doc.data().cidade}</td>
     
     <td>
         <div class="dropdown mo-mb-2" style="text-align: center">
