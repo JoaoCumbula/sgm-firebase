@@ -49,7 +49,12 @@ function createUser() {
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
+      auth
+      .signOut()
+      .then(() => {
+        window.location.href = "pages-login.html";
+      })
+      .catch((error) => {});
       var user = userCredential.user;
       // ...
     })

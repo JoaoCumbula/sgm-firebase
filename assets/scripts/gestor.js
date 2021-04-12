@@ -33,6 +33,7 @@ const renderGestor = (doc) => {
   //Clikc to delete Gestor
   const btnDelete = document.querySelector(`[data-id="${doc.id}"] .btn-delete`);
   btnDelete.addEventListener("click", (e) => {
+    removeUser(doc.data().nome);
     e.preventDefault();
     db.collection("farmacia")
       .doc(doc.data().farmacia)
@@ -42,8 +43,6 @@ const renderGestor = (doc) => {
       .then(() => {
         window.location.href = "list-gestor.html";
       });
-    //  reautenticar();
-    removeUser(doc.data().nome);
     const alert = (document.getElementById("alertmsg").style.display = "block");
   });
 };
@@ -56,24 +55,6 @@ db.collectionGroup("usuario")
       renderGestor(doc);
     });
   });
-
-function reautenticar() {
-  let user = firebase.auth().currentUser;
-
-  var email=prompt("Enter your Email");
-  var password=prompt("Enter your Password");
-  
-  var credential = firebase.auth.EmailAuthProvider.credential(email, password);;
-
-  user
-    .reauthenticateWithCredential(credential)
-    .then(function () {
-      // User re-authenticated.
-    })
-    .catch(function (error) {
-      // An error happened.
-    });
-}
 
 function removeUser(nome) {
   nome = firebase.auth().currentUser;
