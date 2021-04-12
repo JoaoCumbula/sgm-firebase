@@ -18,10 +18,9 @@ const renderGestor = (doc) => {
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item"
-                    href="edit-gestor.html">Editar
+                    href="edit-gestor.html?data-id=${doc.id}">Editar
                     Farmacias</a>
-                <button class="btn btn-delete dropdown-item"
-                    onclick="">
+                <button class="btn btn-delete dropdown-item">
                     Remover
                 </button>
             </div>
