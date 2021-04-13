@@ -18,6 +18,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js" defer></script>
     <script src="assets/scripts/initializer.js" defer></script>
     <script src="assets/scripts/verification-logout.js" defer></script>
     <script src="assets/scripts/dashboard.js" defer></script>
@@ -193,9 +194,7 @@
                                     </div>
                                     <div class="text-white">
                                         <h6 class="text-uppercase mb-3">Total de Farmácias</h6>
-                                        <h4 class="mb-4">1,587</h4>
-                                        <span class="badge badge-info"> +11% </span> <span class="ml-2">From previous
-                                            period</span>
+                                        <h4 class="mb-4" id="farmacia"></h4>
                                     </div>
                                 </div>
                             </div>
@@ -208,9 +207,7 @@
                                     </div>
                                     <div class="text-white">
                                         <h6 class="text-uppercase mb-3">Total de Produtos</h6>
-                                        <h4 class="mb-4">$46,782</h4>
-                                        <span class="badge badge-danger"> -29% </span> <span class="ml-2">From previous
-                                            period</span>
+                                        <h4 class="mb-4"  id="produto"></h4>
                                     </div>
                                 </div>
                             </div>
@@ -223,9 +220,7 @@
                                     </div>
                                     <div class="text-white">
                                         <h6 class="text-uppercase mb-3">Total de Categorias</h6>
-                                        <h4 class="mb-4">$15.9</h4>
-                                        <span class="badge badge-warning"> 0% </span> <span class="ml-2">From previous
-                                            period</span>
+                                        <h4 class="mb-4" id="categoria"></h4>
                                     </div>
                                 </div>
                             </div>
@@ -238,9 +233,7 @@
                                     </div>
                                     <div class="text-white">
                                         <h6 class="text-uppercase mb-3">Total de Gestores</h6>
-                                        <h4 class="mb-4">1890</h4>
-                                        <span class="badge badge-info"> +89% </span> <span class="ml-2">From previous
-                                            period</span>
+                                        <h4 class="mb-4" id="gestor"></h4>
                                     </div>
                                 </div>
                             </div>
